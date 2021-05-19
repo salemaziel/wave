@@ -2,7 +2,7 @@ name: wave
 services:
 - name: web
   github:
-    repo: thedevdojo/wave
+    repo: salemaziel/wave
     branch: main
     deploy_on_push: true
   run_command: php artisan migrate --force ; heroku-php-apache2 public/
@@ -133,7 +133,7 @@ jobs:
 - name: migrate
   kind: POST_DEPLOY
   github:
-    repo: thedevdojo/wave
+    repo: salemaziel/wave
     branch: main
     deploy_on_push: true
   run_command: php artisan migrate --seed ; php artisan storage:link
